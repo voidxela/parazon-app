@@ -1,0 +1,5 @@
+#!/command/with-contenv sh
+# Hono API server — supervised longrun service.
+# with-contenv injects container environment variables before exec.
+# s6 will restart on non-zero exit.
+exec s6-setuidgid parazon node /app/apps/api/dist/index.js

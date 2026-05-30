@@ -1,0 +1,4 @@
+#!/command/execlineb -P
+# Called when the cache-sync process exits. Log the exit code for diagnostics.
+# $1 = exit code, $2 = signal number (or 256 if not killed by signal)
+foreground { s6-echo "cache-sync exited with code ${1}" }

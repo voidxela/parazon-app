@@ -1,0 +1,5 @@
+#!/command/with-contenv sh
+# Polls the Warframe world-state API and writes results to cache.db.
+# Depends on `api` so the database file is initialised before this runs.
+# with-contenv injects container environment variables before exec.
+exec s6-setuidgid parazon node /app/apps/api/dist/workers/cacheSync.js

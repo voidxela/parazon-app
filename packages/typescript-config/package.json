@@ -1,0 +1,20 @@
+{
+  "name": "@parazon/typescript-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "./base.json": "./base.json",
+    "./node.json": "./node.json",
+    "./react-native.json": "./react-native.json",
+    "./base": "./base.json",
+    "./node": "./node.json",
+    "./react-native": "./react-native.json"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5"
+  }
+}
