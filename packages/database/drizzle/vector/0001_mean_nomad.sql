@@ -1,0 +1,1 @@
+ALTER TABLE `documents` ADD `content_hash` text NOT NULL;

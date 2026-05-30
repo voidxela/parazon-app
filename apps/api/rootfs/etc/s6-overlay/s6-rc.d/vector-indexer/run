@@ -1,0 +1,5 @@
+#!/command/with-contenv sh
+# Ingests Warframe wiki/data documents into knowledge_vector.db via sqlite-vec.
+# Depends on `api` so the database file is initialised before this runs.
+# with-contenv injects container environment variables before exec.
+exec s6-setuidgid parazon node /app/apps/api/dist/workers/vectorIndexer.js

@@ -1,0 +1,7 @@
+#!/command/with-contenv sh
+# Runs Drizzle migrations for all three databases before any service starts.
+# Exits non-zero on failure, which prevents s6 from bringing up dependents.
+# with-contenv injects container environment variables (DB paths, API keys)
+# before handing off to sh. migrate.js resolves drizzle/ folders relative to
+# import.meta.url so CWD does not matter.
+exec s6-setuidgid parazon node /app/packages/database/dist/migrate.js
